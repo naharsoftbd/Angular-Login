@@ -1,0 +1,30 @@
+<div class="container" >
+            <div class="title">
+                Welcome
+            </div>
+    <form name="loginform" #loginform="ngForm">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="input-field col-md-12">
+                        <input [(ngModel)]="user.email" id="email" 
+                            type="email" class="validate form-control" name="email">
+                        <label for="email">Email</label>
+                    </div>
+                    
+                </div>
+ 
+                <div class="row">
+                    <div class="input-field col-md-12">
+                        <input [(ngModel)]="user.password" id="password" 
+                            type="password" class="validate form-control" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+ 
+                <span>{{errorMsg}}</span>
+                <button (click)="login()" 
+                    class="btn btn-primary waves-effect waves-light" 
+                    type="submit" name="action">Login</button>
+            </div>
+        </form>
+        </div>
